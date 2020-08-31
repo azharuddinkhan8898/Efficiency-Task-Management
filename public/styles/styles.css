@@ -1,0 +1,320 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+body {
+  margin: 20px 40px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  background: #fafafa;
+}
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+a,
+p,
+input,
+label,
+button,
+div,
+footer {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  color: #444;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 70px;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+}
+nav li {
+  margin-left: 20px;
+}
+nav li a {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+}
+.btn {
+  border-radius: 36px;
+  background: #04b1a4;
+  color: #fff;
+}
+form h2 {
+  font-size: 2.4em;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+form {
+  width: 360px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: white;
+}
+input,
+select {
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  width: 100%;
+}
+label {
+  display: block;
+  margin: 20px 0 10px;
+}
+button {
+  margin-top: 30px;
+  border-radius: 36px;
+  background: #04b1a4;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.error {
+  color: #ff0099;
+  margin: 10px 2px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.content-wrapper {
+  display: flex;
+  align-items: center;
+}
+.content-wrapper img {
+  width: 250px;
+  margin-right: 40px;
+}
+.content-wrapper h2 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+.content-wrapper h3 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  color: #999;
+}
+.content-wrapper .btn {
+  margin-top: 20px;
+  padding: 12px 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 0.8em;
+}
+.recipes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 80px;
+  margin: 80px AUTO;
+  max-width: 1200px;
+}
+.recipe {
+  display: inline-block;
+  border-radius: 20px;
+  background: white;
+  position: relative;
+  text-align: center;
+  padding: 0 20px 30px 20px;
+}
+.recipe img {
+  width: 100px;
+  margin: -30px auto 20px;
+}
+footer {
+  text-align: center;
+  margin-top: 120px;
+  color: #aaa;
+}
+
+.signUpMsg {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signUpMsg a {
+  color: blue;
+}
+
+.task h4 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.task label {
+  font-size: 16px;
+}
+form.task {
+  width: 1000px;
+  max-width: 90%;
+  position: relative;
+}
+
+form.task select {
+  width: 300px;
+}
+
+nav h1 {
+  font-size: 20px;
+}
+
+#actionTask {
+  display: none;
+}
+
+.dropdown.bootstrap-select {
+  width: 500px !important;
+}
+
+.bootstrap-select > .dropdown-toggle {
+  background: none;
+  border-radius: 5px;
+  color: unset;
+  margin-top: 10px;
+}
+
+.task-options .task-option input {
+  width: auto;
+}
+
+.task-options .task-option label {
+  font-weight: 500;
+  display: inline-block;
+  margin: 0px;
+  margin-left: 10px;
+}
+
+.task-options .task-option .right label {
+  margin-left: 0px;
+  margin-right: 10px;
+  width: 80%;
+  text-align: right;
+}
+
+.task-options .task-option .right input {
+  padding: 5px 10px;
+  width: 100px;
+  font-size: 16px;
+  text-align: center;
+  width: 20%;
+}
+
+.task-options .task-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+#comment {
+  height: 60px;
+  width: 300px;
+  margin: 0px;
+  padding: 6px 10px;
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.submit-task {
+  font-size: 16px;
+  /* width: 300px; */
+  /* margin: 0 auto; */
+  margin-top: 50px;
+  padding: 10px 40px;
+}
+
+.disabled {
+  opacity: 0.4;
+}
+
+.task-options .task-option .left * {
+  cursor: pointer;
+}
+
+.task-options .task-option.disabled {
+  opacity: 1;
+}
+
+.task-options .task-option.disabled .right {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.task-options .task-option .left,
+.task-options .task-option .right {
+  display: flex;
+}
+.task-options .task-option .left {
+  width: 70%;
+}
+
+.task-options .task-option .right {
+  width: 30%;
+  align-items: center;
+}
+
+.timer-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: #fff;
+  flex-direction: column;
+  display: none;
+}
+
+.timer-wrapper .timer {
+  color: #fff;
+}
+
+.timer-wrapper .stop-timer {
+  display: block;
+  font-size: 20px;
+  padding: 10px 30px;
+  background: #bb5e5e;
+}

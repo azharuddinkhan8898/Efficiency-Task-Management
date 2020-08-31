@@ -1,0 +1,31 @@
+<%- include('partials/header'); -%>
+
+<div class="content-wrapper1">
+  <form class="task">
+    <h4>Add Task</h4>
+    <label for="Request">Request Types</label>
+    <select name="Request" id="Request" data-live-search="true">
+      <option value="0">Select Request Type</option>
+    </select>
+    <div id="actionTask">
+      <label style="margin-top: 50px">Action Task</label>
+      <div class="task-options"></div>
+      <label for="comment" style="margin-top: 30px">Comments/Ticket Number/Email Subject</label>
+      <textarea
+        name="comment"
+        id="comment"
+        cols="5"
+        placeholder="Enter task details"
+        rows="5"
+      ></textarea>
+      <button class="submit-task disabled" disabled>Start Timer</button>
+    </div>
+    <div class="timer-wrapper">
+      <div class="timer">00:00:00</div>
+      <button class="stop-timer">Stop Timer</button>
+    </div>
+  </form>
+</div>
+
+<script src="/scripts/custom.js" defer></script>
+<%- include('partials/footer'); -%>

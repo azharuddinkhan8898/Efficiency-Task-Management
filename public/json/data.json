@@ -1,0 +1,724 @@
+{
+  "New campaign setup & trafficking": [
+    {
+      "Action Task": "Campaign/Placement/Creative Name Generation",
+      "Counting Methodology": "Specify the no.",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:20:00",
+      "Members with 6 months of Experience": "0:15:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:05:00"
+    },
+    {
+      "Action Task": "UTM Creation and Workflow",
+      "Counting Methodology": "No. of UTM",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:25:00",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:15:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "New Campaign Creation",
+      "Counting Methodology": "No. of campaigns",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:10:00",
+      "Members with 6 months of Experience": "0:10:00",
+      "Members with 1 year of  Experience": "0:05:00",
+      "Members with 1yr and above Experience": "0:05:00"
+    },
+    {
+      "Action Task": "New Placements Creation",
+      "Counting Methodology": "No. of placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:30:00",
+      "Members with 6 months of Experience": "0:15:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:05:00"
+    },
+    {
+      "Action Task": "Creative validation",
+      "Counting Methodology": "No. of creative",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:30:00",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:15:00",
+      "Members with 1yr and above Experience": "0:15:00"
+    },
+    {
+      "Action Task": "Creative and URL Assignment",
+      "Counting Methodology": "No. of creative and URL's",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:20:00",
+      "Members with 6 months of Experience": "0:15:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:05:00"
+    },
+    {
+      "Action Task": "Impression pixel and dynamic click trackers Trafficking",
+      "Counting Methodology": "No. of placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:50:00",
+      "Members with 6 months of Experience": "0:40:00",
+      "Members with 1 year of  Experience": "0:30:00",
+      "Members with 1yr and above Experience": "0:20:00"
+    },
+    {
+      "Action Task": "Wrapping Tags (IAS)",
+      "Counting Methodology": "No. of Campaigns/Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:20:00",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Wrapping Tags (MOAT)",
+      "Counting Methodology": "No. of Campaigns/Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:10:00",
+      "Members with 6 months of Experience": "0:10:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Wrapping Tags (Nielsen)",
+      "Counting Methodology": "No. of Campaigns/Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:40:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:15:00"
+    },
+    {
+      "Action Task": "Wrapping Tags (DV)",
+      "Counting Methodology": "No. of Campaigns/Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:10:00",
+      "Members with 6 months of Experience": "0:10:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Event Tag Testing and Implementation",
+      "Counting Methodology": "No. of Tags",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:40:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:15:00"
+    }
+  ],
+  "Additional Placements & Creatives": [
+    {
+      "Action Task": "New Placements Creation",
+      "Counting Methodology": "No. of placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:30:00",
+      "Members with 6 months of Experience": "0:15:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:05:00"
+    },
+    {
+      "Action Task": "Creative validation",
+      "Counting Methodology": "No. of creative",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:30:00",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:15:00",
+      "Members with 1yr and above Experience": "0:15:00"
+    },
+    {
+      "Action Task": "Creative and URL Assignment",
+      "Counting Methodology": "No. of creative and URL's",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:20:00",
+      "Members with 6 months of Experience": "0:15:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:05:00"
+    },
+    {
+      "Action Task": "Wrapping Tags (IAS)",
+      "Counting Methodology": "No. of Campaigns/Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:20:00",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Wrapping Tags (Nielsen)",
+      "Counting Methodology": "No. of Campaigns/Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:40:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:15:00"
+    },
+    {
+      "Action Task": "Wrapping Tags (MOAT)",
+      "Counting Methodology": "No. of Campaigns/Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:10:00",
+      "Members with 6 months of Experience": "0:10:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Wrapping Tags (DV)",
+      "Counting Methodology": "No. of Campaigns/Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:10:00",
+      "Members with 6 months of Experience": "0:10:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    }
+  ],
+  "Additional Creatives": [
+    {
+      "Action Task": "Creative validation",
+      "Counting Methodology": "No. of creative",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:30:00",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:15:00",
+      "Members with 1yr and above Experience": "0:15:00"
+    },
+    {
+      "Action Task": "Creative and URL Assignment",
+      "Counting Methodology": "No. of creative and URL's",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:20:00",
+      "Members with 6 months of Experience": "0:15:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:05:00"
+    },
+    {
+      "Action Task": "Wrapping Tags (IAS)",
+      "Counting Methodology": "No. of Campaigns/Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:20:00",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Wrapping Tags (Nielsen)",
+      "Counting Methodology": "No. of Campaigns/Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:40:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:15:00"
+    },
+    {
+      "Action Task": "Wrapping Tags (MOAT)",
+      "Counting Methodology": "No. of Campaigns/Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:10:00",
+      "Members with 6 months of Experience": "0:10:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Wrapping Tags (DV)",
+      "Counting Methodology": "No. of Campaigns/Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:10:00",
+      "Members with 6 months of Experience": "0:10:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    }
+  ],
+  "URL Swap": [
+    {
+      "Action Task": "QA of URL's",
+      "Counting Methodology": "No. of URL's",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:05:00",
+      "Members with 6 months of Experience": "0:05:00",
+      "Members with 1 year of  Experience": "0:05:00",
+      "Members with 1yr and above Experience": "0:05:00"
+    },
+    {
+      "Action Task": "URL Assignment",
+      "Counting Methodology": "No. of URL's",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:05:00",
+      "Members with 6 months of Experience": "0:05:00",
+      "Members with 1 year of  Experience": "0:05:00",
+      "Members with 1yr and above Experience": "0:05:00"
+    }
+  ],
+  "GTM and QA": [
+    {
+      "Action Task": "Page View Tag Creation",
+      "Counting Methodology": "No. of Tags",
+      "Number": "5",
+      "Members with 3 months of Experience": "NA",
+      "Members with 6 months of Experience": "NA",
+      "Members with 1 year of  Experience": "0:40:00",
+      "Members with 1yr and above Experience": "0:30:00"
+    },
+    {
+      "Action Task": "Sales Tag Creation",
+      "Counting Methodology": "No. of Tags",
+      "Number": "5",
+      "Members with 3 months of Experience": "NA",
+      "Members with 6 months of Experience": "NA",
+      "Members with 1 year of  Experience": "NA",
+      "Members with 1yr and above Experience": "NA"
+    },
+    {
+      "Action Task": "Page View Tag QA",
+      "Counting Methodology": "No. of Tags",
+      "Number": "5",
+      "Members with 3 months of Experience": "NA",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:05:00"
+    },
+    {
+      "Action Task": "Sales Tag QA",
+      "Counting Methodology": "No. of Tags",
+      "Number": "5",
+      "Members with 3 months of Experience": "NA",
+      "Members with 6 months of Experience": "NA",
+      "Members with 1 year of  Experience": "NA",
+      "Members with 1yr and above Experience": "NA"
+    },
+    {
+      "Action Task": "3rd Party Pixel Implementation in Tag Manager",
+      "Counting Methodology": "No. of Tags",
+      "Number": "5",
+      "Members with 3 months of Experience": "NA",
+      "Members with 6 months of Experience": "NA",
+      "Members with 1 year of  Experience": "0:40:00",
+      "Members with 1yr and above Experience": "0:30:00"
+    }
+  ],
+  "Floodlights & Pixel Piggyback": [
+    {
+      "Action Task": "New Floodlights",
+      "Counting Methodology": "No. of Tags",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:45:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Floodlight QA",
+      "Counting Methodology": "No. of Tags",
+      "Number": "5",
+      "Members with 3 months of Experience": "NA",
+      "Members with 6 months of Experience": "0:15:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:05:00"
+    },
+    {
+      "Action Task": "3rd Party Pixel Piggybacking in DCM",
+      "Counting Methodology": "No. of Tags",
+      "Number": "5",
+      "Members with 3 months of Experience": "NA",
+      "Members with 6 months of Experience": "0:15:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    }
+  ],
+  "Event Tags": [
+    {
+      "Action Task": "Assignment of Event tags",
+      "Counting Methodology": "No. of Tags",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:40:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:15:00"
+    },
+    {
+      "Action Task": "ADARA Setup",
+      "Counting Methodology": "No. of Pixels",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:30:00",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:15:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Event tags and QA",
+      "Counting Methodology": "No. of Tags",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:30:00",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:15:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    }
+  ],
+  "Campaign Set Up QA": [
+    {
+      "Action Task": "Is the setup done under correct Advertiser?"
+    },
+    {
+      "Action Task": "Naming Convention Check",
+      "Counting Methodology": "No. of campaigns/placements/creative names ",
+      "Number": "5",
+      "Members with 3 months of Experience": "NA",
+      "Members with 6 months of Experience": "0:05:00",
+      "Members with 1 year of  Experience": "0:05:00",
+      "Members with 1yr and above Experience": "0:05:00"
+    },
+    {
+      "Action Task": "Creative and Click Through QA",
+      "Counting Methodology": "No. of creative and click through URL ",
+      "Number": "5",
+      "Members with 3 months of Experience": "NA",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:15:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Mapping with details provided on ticket such as media plan, TS, any special instructions, etc.",
+      "Number": "5",
+      "Members with 3 months of Experience": "NA",
+      "Members with 6 months of Experience": "0:25:00",
+      "Members with 1 year of  Experience": "0:15:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "QA of Set up as per the provided instructions",
+      "Counting Methodology": "No. of placements ",
+      "Number": "5",
+      "Members with 3 months of Experience": "NA",
+      "Members with 6 months of Experience": "0:15:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:05:00"
+    },
+    {
+      "Action Task": "Check for creative rotation/weightage if provided",
+      "Counting Methodology": "No. of placements ",
+      "Number": "5",
+      "Members with 3 months of Experience": "NA",
+      "Members with 6 months of Experience": "0:10:00",
+      "Members with 1 year of  Experience": "0:05:00",
+      "Members with 1yr and above Experience": "0:05:00"
+    },
+    {
+      "Action Task": "Test the tags",
+      "Counting Methodology": "No. of Tags ",
+      "Number": "5",
+      "Members with 3 months of Experience": "NA",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:05:00"
+    },
+    {
+      "Action Task": "If instructed, check the tags are correctly wrapped per the TS/client/publisher specification",
+      "Counting Methodology": "No. of Tags ",
+      "Number": "5",
+      "Members with 3 months of Experience": "NA",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:05:00"
+    },
+    {
+      "Action Task": "Check if the correct tags were sent to publishers/local markets/Programmatic team",
+      "Counting Methodology": "No. of publishers",
+      "Number": "5",
+      "Members with 3 months of Experience": "NA",
+      "Members with 6 months of Experience": "0:25:00",
+      "Members with 1 year of  Experience": "0:15:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    }
+  ],
+  "Creative QA": [
+    {
+      "Action Task": "Creative QA HTML/Video",
+      "Counting Methodology": "No. of Creatives",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:45:00",
+      "Members with 6 months of Experience": "0:45:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:15:00"
+    },
+    {
+      "Action Task": "Native Creative QA",
+      "Counting Methodology": "No. of Creatives",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:45:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:15:00"
+    },
+    {
+      "Action Task": "Impression pixel and dynamic click trackers QA",
+      "Counting Methodology": "No. of Creatives",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:40:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:15:00"
+    },
+    {
+      "Action Task": "Static Click tracker Trafficking and QA",
+      "Counting Methodology": "No. of Creatives",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:40:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:15:00"
+    },
+    {
+      "Action Task": "Creative, URL and DTK QA",
+      "Counting Methodology": "No. of creative and URL's",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:45:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:15:00"
+    },
+    {
+      "Action Task": "Creative QA Static",
+      "Counting Methodology": "No. of Creatives",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:20:00",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:15:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    }
+  ],
+  "Reporting": [
+    {
+      "Action Task": "Campaign Reporting",
+      "Counting Methodology": "No. of Campaigns",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:25:00",
+      "Members with 6 months of Experience": "0:25:00",
+      "Members with 1 year of  Experience": "0:25:00",
+      "Members with 1yr and above Experience": "0:25:00"
+    },
+    {
+      "Action Task": "Floodlight Reporting",
+      "Counting Methodology": "No. of Floodlights",
+      "Number": "5",
+      "Members with 3 months of Experience": "NA",
+      "Members with 6 months of Experience": "NA",
+      "Members with 1 year of  Experience": "NA",
+      "Members with 1yr and above Experience": "NA"
+    },
+    {
+      "Action Task": "Post Launch Comparison",
+      "Counting Methodology": "No. of Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:40:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:15:00"
+    }
+  ],
+  "Brand Saftey Wrapping": [
+    {
+      "Action Task": "Wrapping Tags (IAS)",
+      "Counting Methodology": "No. of Campaigns/Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:20:00",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Wrapping Tags (Nielsen)",
+      "Counting Methodology": "No. of Campaigns/Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:40:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:15:00"
+    },
+    {
+      "Action Task": "Wrapping Tags (MOAT)",
+      "Counting Methodology": "No. of Campaigns/Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:10:00",
+      "Members with 6 months of Experience": "0:10:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Wrapping Tags (DV)",
+      "Counting Methodology": "No. of Campaigns/Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:10:00",
+      "Members with 6 months of Experience": "0:10:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    }
+  ],
+  "DSP (Execution and Modification)": [
+    {
+      "Action Task": "DSP QA",
+      "Counting Methodology": "No. of Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:40:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Youtube trueview QA",
+      "Counting Methodology": "No. of Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:40:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:15:00"
+    },
+    {
+      "Action Task": "Line item assignment",
+      "Counting Methodology": "No. of Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:40:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    }
+  ],
+  "DSP (New Campaign and Placement Creation)": [
+    {
+      "Action Task": "DSP Trafficking",
+      "Counting Methodology": "No. of Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:40:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Youtube trueview Trafficking",
+      "Counting Methodology": "No. of Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:40:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:15:00"
+    }
+  ],
+  "DSP (Creative Upload)": [
+    {
+      "Action Task": "Creative Tags upload",
+      "Counting Methodology": "No. of Tags",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:40:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    }
+  ],
+  "Modifications": [
+    {
+      "Action Task": "Itag Sheet Update",
+      "Counting Methodology": "No. of Tags",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:20:00",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Creative renaming",
+      "Counting Methodology": "No. of Creatives",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:20:00",
+      "Members with 6 months of Experience": "0:15:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:05:00"
+    },
+    {
+      "Action Task": "Placement name correction ",
+      "Counting Methodology": "No. of Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:20:00",
+      "Members with 6 months of Experience": "0:15:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:05:00"
+    }
+  ],
+  "UTM Creation and Workflow": [
+    {
+      "Action Task": "UTM Creation and Workflow",
+      "Counting Methodology": "No. of UTM",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:25:00",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:15:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    }
+  ],
+  "Taxonomy generation": [
+    {
+      "Action Task": "Campaign/Placement/Creative Name Generation",
+      "Counting Methodology": "Specify the no.",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:20:00",
+      "Members with 6 months of Experience": "0:15:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:05:00"
+    }
+  ],
+  "Other Requests": [
+    {
+      "Action Task": "Pixel Testing",
+      "Counting Methodology": "No. of Pixels",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:40:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Screenshots",
+      "Counting Methodology": "No. of Screenshots",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:45:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:20:00"
+    },
+    {
+      "Action Task": "Review reporting and data with DS",
+      "Counting Methodology": "No. of Campaigns",
+      "Number": "5",
+      "Members with 3 months of Experience": "NA",
+      "Members with 6 months of Experience": "0:40:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Publisher Test page QA",
+      "Counting Methodology": "No. of Tags",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:30:00",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:15:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Whitelist check",
+      "Counting Methodology": "No. of Placements",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:20:00",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Site Creation",
+      "Counting Methodology": "No. of Sites",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:45:00",
+      "Members with 6 months of Experience": "0:30:00",
+      "Members with 1 year of  Experience": "0:20:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    }
+  ]
+}
