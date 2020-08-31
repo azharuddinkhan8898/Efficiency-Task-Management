@@ -97,16 +97,29 @@ fetchData().then((res) => {
         }
         formData.tasks = tempData;
       }
-      if (formData.tasks.length > 0) {
-        $(".submit-task").removeClass("disabled").removeAttr("disabled");
+      if (formData.tasks.length > 0 && $("#comment").val() != "") {
+        $(".submit-task, .stop-timer")
+          .removeClass("disabled")
+          .removeAttr("disabled");
       } else {
-        $(".submit-task").addClass("disabled").attr("disabled", "disabled");
+        $(".submit-task, .stop-timer")
+          .addClass("disabled")
+          .attr("disabled", "disabled");
       }
     });
 
     $("#comment").on("input", function () {
       formData.comment = $(this).val();
       console.log(formData);
+      if (formData.tasks.length > 0 && $("#comment").val() != "") {
+        $(".submit-task, .stop-timer")
+          .removeClass("disabled")
+          .removeAttr("disabled");
+      } else {
+        $(".submit-task, .stop-timer")
+          .addClass("disabled")
+          .attr("disabled", "disabled");
+      }
     });
     $(".submit-task").click(function (e) {
       e.preventDefault();
@@ -114,10 +127,29 @@ fetchData().then((res) => {
       $(".timer-wrapper").css("display", "flex");
       startTimer();
     });
-    $(".stop-timer").click(function (e) {
+    $(".stop-timer").click(async function (e) {
+      $(".stop-timer").addClass("disabled").attr("disabled", "disabled");
       e.preventDefault();
-      
-      window.location.reload();
+      formData.time = timeDiff;
+      try {
+        const res = await fetch("/addTask", {
+          method: "POST",
+          body: JSON.stringify(formData),
+          headers: { "Content-Type": "application/json" },
+        });
+        const data = await res.json();
+        console.log(data);
+        if (data.errors) {
+          alert("Error while saving data.");
+        }
+        if (data.task) {
+          setTimeout(function () {
+            window.location.reload();
+          }, 1000);
+        }
+      } catch (err) {
+        console.log(err);
+      }
     });
   });
 
@@ -137,7 +169,7 @@ function startTimer() {
     h = checkTime(h); // add a leading zero if it's single digit
     m = checkTime(m); // add a leading zero if it's single digit
     s = checkTime(s); // add a leading zero if it's single digit
-    $(".timer-wrapper .timer").text(h + ":" + m + ":" + s); // update the element where the timer will appear
+    $(".timer-wrapper .timer span").text(h + ":" + m + ":" + s); // update the element where the timer will appear
     var t = setTimeout(startTimeCounter, 500); // set a timeout to update the timer
   }
 

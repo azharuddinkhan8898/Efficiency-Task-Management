@@ -1,5 +1,6 @@
 const User = require("../models/User");
 const jwt = require("jsonwebtoken");
+const Task = require("../models/Task");
 
 // handle errors
 const handleErrors = (err) => {
@@ -81,14 +82,12 @@ module.exports.login_post = async (req, res) => {
 };
 
 module.exports.add_task = async (req, res) => {
+  //const { email, password } = req.body;
   try {
-    const user = await User.login(email, password);
-    const token = createToken(user._id);
-    res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge * 1000 });
-    res.status(200).json({ user: user._id });
+    const task = await Task.create(req.body);
+    res.status(201).json({ task: task._id });
   } catch (err) {
-    const errors = handleErrors(err);
-    res.status(400).json({ errors });
+    res.status(400).json({ errors: "not saved" });
   }
 };
 
