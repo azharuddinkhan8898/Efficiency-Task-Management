@@ -117,17 +117,25 @@ fetchData().then((res) => {
     });
 
     $("#comment").on("input", function () {
-      formData.comment = $(this).val();
-      console.log(formData);
-      if (formData.tasks.length > 0 && $("#comment").val() != "") {
-        $(".submit-task, .stop-timer")
-          .removeClass("disabled")
-          .removeAttr("disabled");
-      } else {
-        $(".submit-task, .stop-timer")
-          .addClass("disabled")
-          .attr("disabled", "disabled");
-      }
+      formData.comment = $(this).val().trim();
+      //console.log(formData);
+      setTimeout(function () {
+        var checkedLength = $(".task-options .task-option.checked").length;
+
+        if (
+          checkedLength != 0 &&
+          formData.tasks.length == checkedLength &&
+          $("#comment").val() != ""
+        ) {
+          $(".submit-task, .stop-timer")
+            .removeClass("disabled")
+            .removeAttr("disabled");
+        } else {
+          $(".submit-task, .stop-timer")
+            .addClass("disabled")
+            .attr("disabled", "disabled");
+        }
+      }, 300);
     });
     $(".submit-task").click(function (e) {
       e.preventDefault();
@@ -146,7 +154,7 @@ fetchData().then((res) => {
           headers: { "Content-Type": "application/json" },
         });
         const data = await res.json();
-        console.log(data);
+        //console.log(data);
         if (data.errors) {
           alert("Error while saving data.");
         }
