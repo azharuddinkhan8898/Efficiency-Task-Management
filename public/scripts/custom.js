@@ -34,8 +34,8 @@ fetchData().then((res) => {
           </div>
           <div class="right">
             <label for="name${index + "" + index}">${
-          val["Counting Methodology"]
-        }:</label>
+          val["Counting Methodology"] ? val["Counting Methodology"] + " :" : ""
+        }</label>
             <input type="number" name="name${index + "" + index}" id="name${
           index + "" + index
         }" />
@@ -97,15 +97,23 @@ fetchData().then((res) => {
         }
         formData.tasks = tempData;
       }
-      if (formData.tasks.length > 0 && $("#comment").val() != "") {
-        $(".submit-task, .stop-timer")
-          .removeClass("disabled")
-          .removeAttr("disabled");
-      } else {
-        $(".submit-task, .stop-timer")
-          .addClass("disabled")
-          .attr("disabled", "disabled");
-      }
+      setTimeout(function () {
+        var checkedLength = $(".task-options .task-option.checked").length;
+
+        if (
+          checkedLength != 0 &&
+          formData.tasks.length == checkedLength &&
+          $("#comment").val() != ""
+        ) {
+          $(".submit-task, .stop-timer")
+            .removeClass("disabled")
+            .removeAttr("disabled");
+        } else {
+          $(".submit-task, .stop-timer")
+            .addClass("disabled")
+            .attr("disabled", "disabled");
+        }
+      }, 300);
     });
 
     $("#comment").on("input", function () {

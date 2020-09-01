@@ -1,7 +1,7 @@
 {
   "New campaign setup & trafficking": [
     {
-      "Action Task": "Campaign/Placement/Creative Name Generation",
+      "Action Task": "Campaign/ Placement/ Creative Name Generation",
       "Counting Methodology": "Specify the no.",
       "Number": "5",
       "Members with 3 months of Experience": "0:20:00",
@@ -65,7 +65,7 @@
     },
     {
       "Action Task": "Wrapping Tags (IAS)",
-      "Counting Methodology": "No. of Campaigns/Placements",
+      "Counting Methodology": "No. of Campaigns/ Placements",
       "Number": "5",
       "Members with 3 months of Experience": "0:20:00",
       "Members with 6 months of Experience": "0:20:00",
@@ -74,7 +74,7 @@
     },
     {
       "Action Task": "Wrapping Tags (MOAT)",
-      "Counting Methodology": "No. of Campaigns/Placements",
+      "Counting Methodology": "No. of Campaigns/ Placements",
       "Number": "5",
       "Members with 3 months of Experience": "0:10:00",
       "Members with 6 months of Experience": "0:10:00",
@@ -83,7 +83,7 @@
     },
     {
       "Action Task": "Wrapping Tags (Nielsen)",
-      "Counting Methodology": "No. of Campaigns/Placements",
+      "Counting Methodology": "No. of Campaigns/ Placements",
       "Number": "5",
       "Members with 3 months of Experience": "0:40:00",
       "Members with 6 months of Experience": "0:30:00",
@@ -92,7 +92,7 @@
     },
     {
       "Action Task": "Wrapping Tags (DV)",
-      "Counting Methodology": "No. of Campaigns/Placements",
+      "Counting Methodology": "No. of Campaigns/ Placements",
       "Number": "5",
       "Members with 3 months of Experience": "0:10:00",
       "Members with 6 months of Experience": "0:10:00",
@@ -139,7 +139,7 @@
     },
     {
       "Action Task": "Wrapping Tags (IAS)",
-      "Counting Methodology": "No. of Campaigns/Placements",
+      "Counting Methodology": "No. of Campaigns/ Placements",
       "Number": "5",
       "Members with 3 months of Experience": "0:20:00",
       "Members with 6 months of Experience": "0:20:00",
@@ -148,7 +148,7 @@
     },
     {
       "Action Task": "Wrapping Tags (Nielsen)",
-      "Counting Methodology": "No. of Campaigns/Placements",
+      "Counting Methodology": "No. of Campaigns/ Placements",
       "Number": "5",
       "Members with 3 months of Experience": "0:40:00",
       "Members with 6 months of Experience": "0:30:00",
@@ -157,7 +157,7 @@
     },
     {
       "Action Task": "Wrapping Tags (MOAT)",
-      "Counting Methodology": "No. of Campaigns/Placements",
+      "Counting Methodology": "No. of Campaigns/ Placements",
       "Number": "5",
       "Members with 3 months of Experience": "0:10:00",
       "Members with 6 months of Experience": "0:10:00",
@@ -166,7 +166,7 @@
     },
     {
       "Action Task": "Wrapping Tags (DV)",
-      "Counting Methodology": "No. of Campaigns/Placements",
+      "Counting Methodology": "No. of Campaigns/ Placements",
       "Number": "5",
       "Members with 3 months of Experience": "0:10:00",
       "Members with 6 months of Experience": "0:10:00",
@@ -195,7 +195,7 @@
     },
     {
       "Action Task": "Wrapping Tags (IAS)",
-      "Counting Methodology": "No. of Campaigns/Placements",
+      "Counting Methodology": "No. of Campaigns/ Placements",
       "Number": "5",
       "Members with 3 months of Experience": "0:20:00",
       "Members with 6 months of Experience": "0:20:00",
@@ -204,7 +204,7 @@
     },
     {
       "Action Task": "Wrapping Tags (Nielsen)",
-      "Counting Methodology": "No. of Campaigns/Placements",
+      "Counting Methodology": "No. of Campaigns/ Placements",
       "Number": "5",
       "Members with 3 months of Experience": "0:40:00",
       "Members with 6 months of Experience": "0:30:00",
@@ -213,7 +213,7 @@
     },
     {
       "Action Task": "Wrapping Tags (MOAT)",
-      "Counting Methodology": "No. of Campaigns/Placements",
+      "Counting Methodology": "No. of Campaigns/ Placements",
       "Number": "5",
       "Members with 3 months of Experience": "0:10:00",
       "Members with 6 months of Experience": "0:10:00",
@@ -222,7 +222,7 @@
     },
     {
       "Action Task": "Wrapping Tags (DV)",
-      "Counting Methodology": "No. of Campaigns/Placements",
+      "Counting Methodology": "No. of Campaigns/ Placements",
       "Number": "5",
       "Members with 3 months of Experience": "0:10:00",
       "Members with 6 months of Experience": "0:10:00",
@@ -361,7 +361,7 @@
     },
     {
       "Action Task": "Naming Convention Check",
-      "Counting Methodology": "No. of campaigns/placements/creative names ",
+      "Counting Methodology": "No. of campaigns/ placements/ creative names ",
       "Number": "5",
       "Members with 3 months of Experience": "NA",
       "Members with 6 months of Experience": "0:05:00",
@@ -395,7 +395,7 @@
       "Members with 1yr and above Experience": "0:05:00"
     },
     {
-      "Action Task": "Check for creative rotation/weightage if provided",
+      "Action Task": "Check for creative rotation/ weightage if provided",
       "Counting Methodology": "No. of placements ",
       "Number": "5",
       "Members with 3 months of Experience": "NA",
@@ -413,7 +413,7 @@
       "Members with 1yr and above Experience": "0:05:00"
     },
     {
-      "Action Task": "If instructed, check the tags are correctly wrapped per the TS/client/publisher specification",
+      "Action Task": "If instructed, check the tags are correctly wrapped per the TS/ client/ publisher specification",
       "Counting Methodology": "No. of Tags ",
       "Number": "5",
       "Members with 3 months of Experience": "NA",
@@ -422,7 +422,7 @@
       "Members with 1yr and above Experience": "0:05:00"
     },
     {
-      "Action Task": "Check if the correct tags were sent to publishers/local markets/Programmatic team",
+      "Action Task": "Check if the correct tags were sent to publishers/ local markets/ Programmatic team",
       "Counting Methodology": "No. of publishers",
       "Number": "5",
       "Members with 3 months of Experience": "NA",
@@ -433,7 +433,7 @@
   ],
   "Creative QA": [
     {
-      "Action Task": "Creative QA HTML/Video",
+      "Action Task": "Creative QA HTML/ Video",
       "Counting Methodology": "No. of Creatives",
       "Number": "5",
       "Members with 3 months of Experience": "0:45:00",
@@ -519,7 +519,7 @@
   "Brand Saftey Wrapping": [
     {
       "Action Task": "Wrapping Tags (IAS)",
-      "Counting Methodology": "No. of Campaigns/Placements",
+      "Counting Methodology": "No. of Campaigns/ Placements",
       "Number": "5",
       "Members with 3 months of Experience": "0:20:00",
       "Members with 6 months of Experience": "0:20:00",
@@ -528,7 +528,7 @@
     },
     {
       "Action Task": "Wrapping Tags (Nielsen)",
-      "Counting Methodology": "No. of Campaigns/Placements",
+      "Counting Methodology": "No. of Campaigns/ Placements",
       "Number": "5",
       "Members with 3 months of Experience": "0:40:00",
       "Members with 6 months of Experience": "0:30:00",
@@ -537,7 +537,7 @@
     },
     {
       "Action Task": "Wrapping Tags (MOAT)",
-      "Counting Methodology": "No. of Campaigns/Placements",
+      "Counting Methodology": "No. of Campaigns/ Placements",
       "Number": "5",
       "Members with 3 months of Experience": "0:10:00",
       "Members with 6 months of Experience": "0:10:00",
@@ -546,7 +546,7 @@
     },
     {
       "Action Task": "Wrapping Tags (DV)",
-      "Counting Methodology": "No. of Campaigns/Placements",
+      "Counting Methodology": "No. of Campaigns/ Placements",
       "Number": "5",
       "Members with 3 months of Experience": "0:10:00",
       "Members with 6 months of Experience": "0:10:00",
@@ -656,7 +656,7 @@
   ],
   "Taxonomy generation": [
     {
-      "Action Task": "Campaign/Placement/Creative Name Generation",
+      "Action Task": "Campaign/ Placement/ Creative Name Generation",
       "Counting Methodology": "Specify the no.",
       "Number": "5",
       "Members with 3 months of Experience": "0:20:00",
