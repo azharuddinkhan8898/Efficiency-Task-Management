@@ -36,10 +36,10 @@ fetchData().then((res) => {
             <label for="name${index}">${val["Action Task"]}</label>
           </div>
           <div class="right">
-            <label for="name${index + "" + index}">${
+            <label for="input${index + "" + index}">${
           val["Counting Methodology"] ? val["Counting Methodology"] + " :" : ""
         }</label>
-            <input type="number" name="name${index + "" + index}" id="name${
+            <input type="number" name="input${index + "" + index}" id="input${
           index + "" + index
         }" />
           </div>
