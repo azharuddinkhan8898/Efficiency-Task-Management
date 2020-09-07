@@ -1,25 +1,33 @@
 const mongoose = require("mongoose");
 
-const taskSchema = new mongoose.Schema({
-  email: {
-    type: String,
+const taskSchema = new mongoose.Schema(
+  {
+    email: {
+      type: String,
+    },
+    requestType: {
+      type: String,
+    },
+    tasks: {
+      type: Array,
+    },
+    comment: {
+      type: String,
+    },
+    time: {
+      type: String,
+    },
+    paused: {
+      type: Boolean,
+    },
   },
-  requestType: {
-    type: String,
-  },
-  tasks: {
-    type: Array,
-  },
-  comment: {
-    type: String,
-  },
-  time: {
-    type: String,
-  },
-  paused: {
-    type: Boolean,
-  },
-});
+  {
+    timestamps: {
+      createdAt: "createdAt",
+      updatedAt: "updatedAt",
+    },
+  }
+);
 
 // // fire a function before doc saved to db
 // userSchema.pre("save", async function (next) {
