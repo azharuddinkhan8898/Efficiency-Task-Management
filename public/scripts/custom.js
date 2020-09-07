@@ -14,9 +14,7 @@ async function fetchData() {
   let jsonData = await data.json();
   return jsonData;
 }
-// window.onbeforeunload = function () {
-//   return "Are you sure you want to leave?";
-// };
+
 fetchData().then((res) => {
   for (var k in res) {
     $("#Request").append(`<option value="${k}">${k}</option>`);
@@ -177,6 +175,9 @@ fetchData().then((res) => {
 
 function startTimer() {
   $(".pause").show();
+  window.onbeforeunload = function () {
+    return "Are you sure you want to leave?";
+  };
   var startTime = 0; //Get the starting time (right now) in seconds
   localStorage.setItem("startTime", startTime); // Store it if I want to restart the timer on the next page
 
