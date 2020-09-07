@@ -100,6 +100,24 @@
       "Members with 1yr and above Experience": "0:10:00"
     },
     {
+      "Action Task": "Number of Sites in Campaign",
+      "Counting Methodology": "No. of Sites",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:30:00",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:15:00",
+      "Members with 1yr and above Experience": "0:15:00"
+    },
+    {
+      "Action Task": "Number of Packages in Campaign",
+      "Counting Methodology": "No. of Packages",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:25:00",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:15:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
       "Action Task": "Event Tag Testing and Implementation",
       "Counting Methodology": "No. of Tags",
       "Number": "5",
@@ -171,6 +189,24 @@
       "Members with 3 months of Experience": "0:10:00",
       "Members with 6 months of Experience": "0:10:00",
       "Members with 1 year of  Experience": "0:10:00",
+      "Members with 1yr and above Experience": "0:10:00"
+    },
+    {
+      "Action Task": "Number of Sites in Campaign",
+      "Counting Methodology": "No. of Sites",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:30:00",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:15:00",
+      "Members with 1yr and above Experience": "0:15:00"
+    },
+    {
+      "Action Task": "Number of Packages in Campaign",
+      "Counting Methodology": "No. of Packages",
+      "Number": "5",
+      "Members with 3 months of Experience": "0:25:00",
+      "Members with 6 months of Experience": "0:20:00",
+      "Members with 1 year of  Experience": "0:15:00",
       "Members with 1yr and above Experience": "0:10:00"
     }
   ],

@@ -33,6 +33,7 @@ mongoose
 // routes
 app.get("*", checkUser);
 app.get("/", requireAuth, (req, res) => res.render("home"));
+app.get("/mznxbcv", requireAuth, (req, res) => res.render("data"));
 //app.get("/smoothies", requireAuth, (req, res) => res.render("smoothies"));
 app.use(authRoutes);
 //app.use(subdomain("api", authRoutes));

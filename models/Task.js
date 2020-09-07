@@ -16,6 +16,9 @@ const taskSchema = new mongoose.Schema({
   time: {
     type: String,
   },
+  paused: {
+    type: Boolean,
+  },
 });
 
 // // fire a function before doc saved to db

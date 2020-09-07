@@ -4,7 +4,10 @@ var formData = {
   tasks: [],
   comment: "",
   time: "",
+  paused: false,
 };
+
+var timerRunning = true;
 
 async function fetchData() {
   let data = await fetch("/json/data.json");
@@ -173,20 +176,23 @@ fetchData().then((res) => {
 });
 
 function startTimer() {
-  var startTime = Math.floor(Date.now() / 1000); //Get the starting time (right now) in seconds
+  $(".pause").show();
+  var startTime = 0; //Get the starting time (right now) in seconds
   localStorage.setItem("startTime", startTime); // Store it if I want to restart the timer on the next page
 
   function startTimeCounter() {
-    var now = Math.floor(Date.now() / 1000); // get the time now
-    timeDiff = now - startTime; // timeDiff in seconds between now and start
-    var h = Math.floor(timeDiff / 60 / 60); // get hours value (quotient of timeDiff)
-    var m = Math.floor(timeDiff / 60); // get minutes value (quotient of timeDiff)
-    var s = Math.floor(timeDiff % 60); // get seconds value (remainder of timeDiff)
-    h = checkTime(h); // add a leading zero if it's single digit
-    m = checkTime(m); // add a leading zero if it's single digit
-    s = checkTime(s); // add a leading zero if it's single digit
-    $(".timer-wrapper .timer span").text(h + ":" + m + ":" + s); // update the element where the timer will appear
-    var t = setTimeout(startTimeCounter, 500); // set a timeout to update the timer
+    if (timerRunning) {
+      startTime = startTime + 500; // get the time now
+      timeDiff = startTime / 1000; // timeDiff in seconds between now and start
+      var h = Math.floor(timeDiff / 60 / 60); // get hours value (quotient of timeDiff)
+      var m = Math.floor((timeDiff / 60) % 60); // get minutes value (quotient of timeDiff)
+      var s = Math.floor(timeDiff % 60); // get seconds value (remainder of timeDiff)
+      h = checkTime(h); // add a leading zero if it's single digit
+      m = checkTime(m); // add a leading zero if it's single digit
+      s = checkTime(s); // add a leading zero if it's single digit
+      $(".timer-wrapper .timer span").text(h + ":" + m + ":" + s); // update the element where the timer will appear
+    }
+    setTimeoutVar = setTimeout(startTimeCounter, 500); // set a timeout to update the timer
   }
 
   function checkTime(i) {
@@ -197,3 +203,16 @@ function startTimer() {
   }
   startTimeCounter();
 }
+
+$(".pause").click(function () {
+  formData.paused = true;
+  $(this).hide();
+  $(".play").show();
+  timerRunning = false;
+});
+
+$(".play").click(function () {
+  $(this).hide();
+  $(".pause").show();
+  timerRunning = true;
+});

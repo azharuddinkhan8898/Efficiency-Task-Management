@@ -321,3 +321,17 @@ input[type="number"]::-webkit-outer-spin-button {
   /* margin-top: 50px; */
   padding: 10px 40px;
 }
+
+.controls > div {
+  margin-left: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.controls > div img {
+  width: 30px;
+}
+
+.controls > div span {
+  display: none;
+}
