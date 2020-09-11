@@ -7,6 +7,8 @@ var formData = {
   paused: false,
 };
 
+var setTimeoutVar;
+
 var timerRunning = true;
 
 async function fetchData() {
@@ -183,7 +185,7 @@ function startTimer() {
 
   function startTimeCounter() {
     if (timerRunning) {
-      startTime = startTime + 500; // get the time now
+      startTime = startTime + 1000; // get the time now
       timeDiff = startTime / 1000; // timeDiff in seconds between now and start
       var h = Math.floor(timeDiff / 60 / 60); // get hours value (quotient of timeDiff)
       var m = Math.floor((timeDiff / 60) % 60); // get minutes value (quotient of timeDiff)
@@ -193,7 +195,9 @@ function startTimer() {
       s = checkTime(s); // add a leading zero if it's single digit
       $(".timer-wrapper .timer span").text(h + ":" + m + ":" + s); // update the element where the timer will appear
     }
-    setTimeoutVar = setTimeout(startTimeCounter, 500); // set a timeout to update the timer
+    if (!setTimeoutVar) {
+      setTimeoutVar = setInterval(startTimeCounter, 1000); // set a timeout to update the timer
+    }
   }
 
   function checkTime(i) {
