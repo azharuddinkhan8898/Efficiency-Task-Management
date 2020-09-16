@@ -44,8 +44,13 @@
       }
 
       if (data.user) {
-        window.localStorage.setItem("_id", data.user);
-        location.assign("/");
+        //window.localStorage.setItem("_id", data.user);
+        if (data.authority === "admin" || data.authority === "lead") {
+          // location.assign("/dashboard");
+          location.assign("/");
+        } else {
+          location.assign("/");
+        }
       }
     } catch (err) {
       console.log(err);

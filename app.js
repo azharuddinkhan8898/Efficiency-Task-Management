@@ -4,6 +4,7 @@ const authRoutes = require("./routes/authRoutes");
 const cookieParser = require("cookie-parser");
 const { requireAuth, checkUser } = require("./middleware/authMiddleware");
 var subdomain = require("express-subdomain");
+const { MONGO_URL } = require("./config/config");
 
 const app = express();
 
@@ -16,8 +17,7 @@ app.use(cookieParser());
 app.set("view engine", "ejs");
 
 // database connection
-const dbURI =
-  "mongodb+srv://azhar:azhar123@cluster0.7hvdi.mongodb.net/efficiency";
+const dbURI = MONGO_URL;
 mongoose
   .connect(dbURI, {
     useNewUrlParser: true,
@@ -34,6 +34,7 @@ mongoose
 app.get("*", checkUser);
 app.get("/", requireAuth, (req, res) => res.render("home"));
 app.get("/mznxbcv", requireAuth, (req, res) => res.render("data"));
+app.get("/dashboard", requireAuth, (req, res) => res.render("dashboard"));
 //app.get("/smoothies", requireAuth, (req, res) => res.render("smoothies"));
 app.use(authRoutes);
 //app.use(subdomain("api", authRoutes));

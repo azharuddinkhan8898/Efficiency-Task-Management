@@ -1,6 +1,8 @@
 const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 const Task = require("../models/Task");
+const TaskConnection = require("../models/TaskConnection");
+const UserConnection = require("../models/UserConnection");
 //const JSONFormatter = require("json-formatter-js");
 // handle errors
 const handleErrors = (err) => {
@@ -69,12 +71,12 @@ module.exports.signup_post = async (req, res) => {
 
 module.exports.login_post = async (req, res) => {
   const { email, password } = req.body;
-
   try {
     const user = await User.login(email, password);
+    const authority = await UserConnection.check(email);
     const token = createToken(user._id);
     res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge * 1000 });
-    res.status(200).json({ user: user._id });
+    res.status(200).json({ user: user._id, authority });
   } catch (err) {
     const errors = handleErrors(err);
     res.status(400).json({ errors });
@@ -82,7 +84,6 @@ module.exports.login_post = async (req, res) => {
 };
 
 module.exports.add_task = async (req, res) => {
-  //const { email, password } = req.body;
   try {
     const task = await Task.create(req.body);
     res.status(201).json({ task: task._id });
@@ -106,4 +107,82 @@ module.exports.post_data = async (req, res) => {
   res.status(201).json({
     data: user,
   });
+};
+
+module.exports.addTaskConnection = async (req, res) => {
+  const {
+    taskType,
+    task,
+    methodology,
+    number,
+    threeMonths,
+    sixMonths,
+    oneYear,
+    aboveOneYear,
+  } = req.body;
+
+  try {
+    const taskRes = await TaskConnection.create({
+      taskType,
+      task,
+      methodology,
+      number,
+      threeMonths,
+      sixMonths,
+      oneYear,
+      aboveOneYear,
+    });
+    res.status(201).json({ task: taskRes });
+  } catch (err) {
+    res.status(400).json({ error: "can not add" });
+  }
+};
+
+module.exports.addUserConnection = async (req, res) => {
+  const {
+    email,
+    name,
+    reportingName,
+    reportingEmail,
+    shift,
+    authority,
+    doj,
+  } = req.body;
+  console.log(email, name, reportingName, reportingEmail, shift, authority);
+  try {
+    const userRes = await UserConnection.create({
+      email,
+      name,
+      reportingName,
+      reportingEmail,
+      shift,
+      authority,
+      doj,
+    });
+    res.status(201).json({ user: userRes });
+  } catch (err) {
+    res.status(400).json({ error: "can not add" });
+  }
+};
+
+module.exports.get_dashboard = async (req, res) => {
+  res.render("dashboard");
+};
+
+// module.exports.check_authority = async (email) => {
+//   let authority = await UserConnection.findOne({ email: email });
+//   return authority.authority;
+// };
+
+module.exports.get_addUser = async (req, res) => {
+  res.render("addUser");
+};
+
+module.exports.get_viewTasks = async (req, res) => {
+  res.render("viewTasks");
+};
+
+module.exports.post_viewTasks = async (req, res) => {
+  const data = await UserConnection.viewTasks(req.body.email);
+  res.status(201).json({ data });
 };

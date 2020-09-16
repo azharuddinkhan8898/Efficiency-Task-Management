@@ -1,0 +1,20 @@
+<%- include('partials/header'); -%>
+<link
+  rel="stylesheet"
+  href="http://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"
+/>
+<div class="content-wrapper viewTasks" style="display: block">
+  <h2>View tasks</h2>
+  <p></p>
+  <p class="loading">Loading...</p>
+</div>
+
+<script>
+  user = <%- JSON.stringify(user.email) %>;
+</script>
+<script
+  src="http://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"
+  defer
+></script>
+<script src="/scripts/viewTask.js" defer></script>
+<%- include('partials/footer'); -%>

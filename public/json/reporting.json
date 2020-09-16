@@ -1,357 +1,286 @@
-[
-  {
-    "Employee": "Manoj Nair",
+{
+  "Manoj Nair": {
     "Reporting Manager": "Vanashree Khedkar",
     "Team": "AU"
   },
-  {
-    "Employee": "Pradeep Naik",
+  "Pradeep Naik": {
     "Reporting Manager": "Manoj Nair",
     "Team": "AU"
   },
-  {
-    "Employee": "Sharan Saraf",
+  "Sharan Saraf": {
     "Reporting Manager": "Manoj Nair",
     "Team": "AU"
   },
-  {
-    "Employee": "Hoorbanu Sorathiya",
+  "Hoorbanu Sorathiya": {
     "Reporting Manager": "Sharan Saraf",
     "Team": "AU"
   },
-  {
-    "Employee": "Sagar Pingale",
+  "Sagar Pingale": {
     "Reporting Manager": "Pradeep Naik",
     "Team": "AU"
   },
-  {
-    "Employee": "Navin Devrukhkar",
+  "Navin Devrukhkar": {
     "Reporting Manager": "Pradeep Naik",
     "Team": "AU"
   },
-  {
-    "Employee": "Neha Sharma",
+  "Neha Sharma": {
     "Reporting Manager": "Pradeep Naik",
     "Team": "AU"
   },
-  {
-    "Employee": "Azharruddin Khan",
+  "Azharruddin Khan": {
     "Reporting Manager": "Pradeep Naik",
     "Team": "AU"
   },
-  {
-    "Employee": "Uday Ghule",
+  "Uday Ghule": {
     "Reporting Manager": "Pradeep Naik",
     "Team": "AU"
   },
-  {
-    "Employee": "Snehal More",
+  "Snehal More": {
     "Reporting Manager": "Sharan Saraf",
     "Team": "AU"
   },
-  {
-    "Employee": "Narayan Nadar",
+  "Narayan Nadar": {
     "Reporting Manager": "Sharan Saraf",
     "Team": "AU"
   },
-  {
-    "Employee": "Swapnil Singh",
+  "Swapnil Singh": {
     "Reporting Manager": "Sharan Saraf",
     "Team": "AU"
   },
-  {
-    "Employee": "Radhika Parkhi",
+  "Radhika Parkhi": {
     "Reporting Manager": "Sharan Saraf",
     "Team": "AU"
   },
-  {
-    "Employee": "Afzaal Shaikh",
+  "Afzaal Shaikh": {
     "Reporting Manager": "Manoj Nair",
     "Team": "AU"
   },
-  {
-    "Employee": "Akhil Sawant",
+  "Akhil Sawant": {
     "Reporting Manager": "Manoj Nair",
     "Team": "AU"
   },
-  {
-    "Employee": "Viral Jain",
+  "Viral Jain": {
     "Reporting Manager": "Vanashree Khedkar",
     "Team": "INTL"
   },
-  {
-    "Employee": "Darryl Dmello",
+  "Darryl Dmello": {
     "Reporting Manager": "Viral Jain",
     "Team": "INTL"
   },
-  {
-    "Employee": "Shoaib Shaikh",
+  "Shoaib Shaikh": {
     "Reporting Manager": "Darryl Dmello",
     "Team": "INTL"
   },
-  {
-    "Employee": "Sudeep Dalal",
+  "Sudeep Dalal": {
     "Reporting Manager": "Darryl Dmello",
     "Team": "INTL"
   },
-  {
-    "Employee": "Ritesh kumar",
+  "Ritesh kumar": {
     "Reporting Manager": "Darryl Dmello",
     "Team": "INTL"
   },
-  {
-    "Employee": "Uday Vikruti",
+  "Uday Vikurthi": {
     "Reporting Manager": "Darryl Dmello",
     "Team": "INTL"
   },
-  {
-    "Employee": "Gilbert Chettiar",
+  "Gilbert Chettiar": {
     "Reporting Manager": "Darryl Dmello",
     "Team": "INTL"
   },
-  {
-    "Employee": "Rehaan Rizvi",
+  "Rehaan Rizvi": {
     "Reporting Manager": "Viral Jain",
     "Team": "INTL"
   },
-  {
-    "Employee": "Sanjay Panwar",
+  "Sanjay Panwar": {
     "Reporting Manager": "Viral Jain",
     "Team": "INTL"
   },
-  {
-    "Employee": "Sarosh Ahmad",
+  "Sarosh Ahmad": {
     "Reporting Manager": "Viral Jain",
     "Team": "INTL"
   },
-  {
-    "Employee": "Mayur Mane",
+  "Mayur Mane": {
     "Reporting Manager": "Viral Jain",
     "Team": "INTL"
   },
-  {
-    "Employee": "Nitin Patel",
+  "Nitin Patel": {
     "Reporting Manager": "Rehaan Rizvi",
     "Team": "INTL"
   },
-  {
-    "Employee": "Chinmay Kalekar",
+  "Chinmay Kalekar": {
     "Reporting Manager": "Rehaan Rizvi",
     "Team": "INTL"
   },
-  {
-    "Employee": "Deep Kothari",
+  "Deep Kothari": {
     "Reporting Manager": "Sanjay Panwar",
     "Team": "INTL"
   },
-  {
-    "Employee": "Thasaratha Nadar",
+  "Thasaratha Nadar": {
     "Reporting Manager": "Sanjay Panwar",
     "Team": "INTL"
   },
-  {
-    "Employee": "Lavish Mundra",
+  "Lavish Mundra": {
     "Reporting Manager": "Rehaan Rizvi",
     "Team": "INTL"
   },
-  {
-    "Employee": "Karan Shelar",
+  "Karan Shelar": {
     "Reporting Manager": "Mayur Mane",
     "Team": "INTL"
   },
-  {
-    "Employee": "Sagar Lund ",
+  "Sagar Lund": {
     "Reporting Manager": "Mayur Mane",
     "Team": "INTL"
   },
-  {
-    "Employee": "Vishal Chauhan",
+  "Vishal Chauhan": {
     "Reporting Manager": "Rehaan Rizvi",
     "Team": "INTL"
   },
-  {
-    "Employee": "Syed Azizuddin",
+  "Azizuddin Syed": {
     "Reporting Manager": "Sanjay Panwar",
     "Team": "INTL"
   },
-  {
-    "Employee": "Riya Jena",
+  "Riya Jena": {
     "Reporting Manager": "Rehaan Rizvi",
     "Team": "INTL"
   },
-  {
-    "Employee": "Subham Mahapatra",
+  "Subham Mahapatra": {
     "Reporting Manager": "Mayur Mane",
     "Team": "INTL"
   },
-  {
-    "Employee": "Akash Pohal",
+  "Akash Pohal": {
     "Reporting Manager": "Sarosh Ahmad",
     "Team": "INTL"
   },
-  {
-    "Employee": "Manali Talekar",
+  "Manali Talekar": {
     "Reporting Manager": "Mayur Mane",
     "Team": "INTL"
   },
-  {
-    "Employee": "Swati Dutta",
+  "Swati Dutta": {
     "Reporting Manager": "Rehaan Rizvi",
     "Team": "INTL"
   },
-  {
-    "Employee": "Jayaram Shetty",
+  "Jayaram Shetty": {
     "Reporting Manager": "Sanjay Panwar",
     "Team": "INTL"
   },
-  {
-    "Employee": "Suhbransu Nanda",
+  "Suhbransu Nanda": {
     "Reporting Manager": "Vanashree Khedkar",
     "Team": "US"
   },
-  {
-    "Employee": "Sumit Korade",
+  "Sumit Korade": {
     "Reporting Manager": "Suhbransu Nanda",
     "Team": "US"
   },
-  {
-    "Employee": "Reema Binoy",
+  "Reema Binoy": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Salman Patel",
+  "Salman Patel": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Shiju Joseph",
+  "Shiju Joseph": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Ashfaque Shaikh",
+  "Ashfaque Shaikh": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Azim Salmani",
+  "Azim Salmani": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Amruta Gokhale",
+  "Amruta Gokhale": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Raashid Khan",
+  "Raashid Khan": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Pavan Alur",
+  "Pavan Alur": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Amarnath Gupta",
+  "Amarnath Gupta": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Bhushan Chaudhari",
+  "Bhushan Chaudhari": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Lokesh Akkala",
+  "Lokesh Akkala": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Chaitanya Nawale",
+  "Chaitanya Nawale": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Chetan Boricha",
+  "Chetan Boricha": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Jayesh Singh",
+  "Jayesh Singh": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Riddhi Jambhekar",
+  "Riddhi Jambhekar": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Abhishek Nishad",
+  "Abhishek Nishad": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Steffani Dsouza",
+  "Steffani Dsouza": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Sayantika Deb",
+  "Sayantika Deb": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Suresh Burra",
+  "Suresh Burra": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Digvijay Pattnayak",
+  "Digvijay Pattnayak": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Ashley Dsouza",
+  "Ashley Dsouza": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Mohammed Sadiqh",
+  "Mohammed Sadiqh": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Gautaman Narayanan",
+  "Gautaman Narayanan": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Vinod Bisht",
+  "Vinod Bisht": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Sejal Mahida",
+  "Sejal Mahida": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Siddhant Pandey",
+  "Siddhant Pandey": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Sakshi Joshi",
+  "Sakshi Joshi": {
     "Reporting Manager": "Sumit Korade",
     "Team": "US"
   },
-  {
-    "Employee": "Senthil Kumaran",
+  "Senthil Kumaran": {
     "Reporting Manager": "Suhbransu Nanda",
     "Team": "US"
   }
-]
+}

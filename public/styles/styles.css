@@ -47,10 +47,10 @@ nav li {
 nav li a {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 0.8em;
+  font-size: 0.9em;
   display: block;
-  padding: 10px 16px;
-  letter-spacing: 2px;
+  padding: 10px 0px;
+  letter-spacing: 1px;
 }
 .btn {
   border-radius: 36px;
@@ -334,4 +334,14 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .controls > div span {
   display: none;
+}
+
+.data-table th,
+.data-table td {
+  font-size: 12px;
+}
+
+.data-table thead tr th:not(:first-child),
+.data-table tbody tr td:not(:first-child) {
+  text-align: center;
 }

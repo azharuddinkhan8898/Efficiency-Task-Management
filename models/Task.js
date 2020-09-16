@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const TaskConnection = require("./TaskConnection");
 
 const taskSchema = new mongoose.Schema(
   {
@@ -19,6 +20,9 @@ const taskSchema = new mongoose.Schema(
     },
     paused: {
       type: Boolean,
+    },
+    eScore: {
+      type: Number,
     },
   },
   {
@@ -48,6 +52,24 @@ const taskSchema = new mongoose.Schema(
 //   }
 //   throw Error("incorrect email");
 // };
+
+taskSchema.statics.fetchTask = async function (emails) {
+  let emailsString = emails.join("|");
+  emailsString = `(${emailsString})`;
+  //emailsString = `(azharruddin.khan@kinesso.com|ritesh.kumar@kinesso.com|karan.shelar@kinesso.com)`;
+  const tasks = await this.find({
+    $or: [{ email: { $regex: emailsString, $options: "img" } }],
+  });
+  return tasks;
+};
+
+// taskSchema.pre("save", async function (next) {
+//   this.eScore = 0;
+//   let type = this.requestType;
+//   let tasks = this.tasks;
+//   const taskConnection = TaskConnection.find("")
+//   next();
+// });
 
 const Task = mongoose.model("tasks", taskSchema);
 
