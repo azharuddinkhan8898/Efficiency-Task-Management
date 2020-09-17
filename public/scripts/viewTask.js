@@ -18,10 +18,10 @@ async function loadData() {
         task.time
       ) {
         let date = task.createdAt.split("T")[0];
-        if (!tempObj[date]) {
-          tempObj[date] = true;
-          tempArr.push(date);
-        }
+        // if (!tempObj[date]) {
+        //   tempObj[date] = true;
+        //   tempArr.push(date);
+        // }
         data1[email][date] =
           data1[email][date] !== 0 && data1[email][date] != undefined
             ? data1[email][date] + parseInt(task.time)
@@ -32,10 +32,11 @@ async function loadData() {
     });
   });
   //   console.log(data1);
+  tempArr = LastDays(14);
   tempArr.sort();
-  if (tempArr.length > 7) {
-    tempArr = tempArr.slice(Math.max(tempArr.length - 7, 0));
-  }
+  // if (tempArr.length > 7) {
+  //   tempArr = tempArr.slice(Math.max(tempArr.length - 7, 0));
+  // }
   let keys = Object.keys(data1);
   let html = `
     <table class="data-table" id="myTable">
@@ -52,7 +53,10 @@ async function loadData() {
     ${keys
       .map((el) => {
         return `<tr>
-        <td><strong style="text-transform:capitalize">${el.split("@")[0].split(".").join(" ")}</strong></td>
+        <td><strong style="text-transform:capitalize">${el
+          .split("@")[0]
+          .split(".")
+          .join(" ")}</strong></td>
         ${tempArr
           .map((ell) => {
             return `<td>${
@@ -68,11 +72,40 @@ async function loadData() {
     
     </table>
   `;
-  $(".loading").hide()
+  $(".loading").hide();
   $(".content-wrapper").append(html);
   $("#myTable").DataTable();
 }
 loadData();
+
+function formatDateNew(date) {
+  var dd = date.getDate();
+  var mm = date.getMonth() + 1;
+  var yyyy = date.getFullYear();
+  if (dd < 10) {
+    dd = "0" + dd;
+  }
+  if (mm < 10) {
+    mm = "0" + mm;
+  }
+  //date = mm + "/" + dd + "/" + yyyy;
+  date = `${yyyy}-${mm}-${dd}`;
+  return date;
+}
+
+function LastDays(days) {
+  var result = [];
+  for (var i = 0; i < days; i++) {
+    var d = new Date();
+    d.setDate(d.getDate() - i);
+    //console.log(getDay(d));
+    if (getDay(d) !== "Sat" && getDay(d) !== "Sun") {
+      result.push(formatDateNew(d));
+    }
+  }
+
+  return result;
+}
 
 function timeConvert(time) {
   var hours = Math.floor(time / 3600);

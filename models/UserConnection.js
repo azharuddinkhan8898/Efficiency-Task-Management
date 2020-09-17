@@ -54,22 +54,35 @@ userConnectionSchema.statics.check = async function (email) {
 };
 
 userConnectionSchema.statics.viewTasks = async function (email) {
-  let emails = [];
+  let emails = await getEmails([email]);
   // let emails = [
   //   "azharruddin.khan@kinesso.com",
   //   "ritesh.kumar@kinesso.com",
   //   "karan.shelar@kinesso.com",
   // ];
-  const user = await this.find({ reportingEmail: email });
+  let temp = await getEmails(emails);
+  console.log(temp)
+  //const tasks = await Task.fetchTask(emails);
+
+  const tasks = await Task.fetchTask(emails);
+
+  return { tasks, emails };
+};
+
+const getEmails = async function (reportingEmail) {
+  let emailsString = reportingEmail.join("|");
+  emailsString = `(${emailsString})`;
+  //const user = await UserConnection.find({ reportingEmail });
+  const user = await UserConnection.find({
+    $or: [{ reportingEmail: { $regex: emailsString, $options: "img" } }],
+  });
+  let emails = [];
   if (user.length) {
     user.forEach((el) => {
       emails.push(el.email);
     });
   }
-  //const tasks = await Task.fetchTask(emails);
-  const tasks = await Task.fetchTask(emails);
-
-  return { tasks, emails };
+  return emails;
 };
 
 const UserConnection = mongoose.model("userConnection", userConnectionSchema);
