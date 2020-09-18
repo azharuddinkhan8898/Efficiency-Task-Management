@@ -74,7 +74,7 @@ async function loadData() {
   `;
   $(".loading").hide();
   $(".content-wrapper").append(html);
-  $("#myTable").DataTable({paging: false});
+  $("#myTable").DataTable({ paging: false });
 }
 loadData();
 
