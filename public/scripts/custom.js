@@ -1,5 +1,5 @@
 var formData = {
-  email: $("nav ul li:first-child").text().replace("Welcome, ", ""),
+  email: user,
   requestType: "",
   tasks: [],
   comment: "",
