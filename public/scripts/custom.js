@@ -8,7 +8,7 @@ var formData = {
 };
 
 var setTimeoutVar;
-
+let stopReload = true;
 var timerRunning = true;
 
 async function fetchData() {
@@ -147,9 +147,17 @@ fetchData().then((res) => {
       startTimer();
     });
     $(".stop-timer").click(async function (e) {
+      stopReload = false;
+      timerRunning = false;
+      $(".cd-popup").addClass("is-visible");
       $(".stop-timer").addClass("disabled").attr("disabled", "disabled");
       e.preventDefault();
+    });
+
+    $(".alert-yes").click(async function () {
       formData.time = timeDiff;
+      $(".cd-buttons").addClass("submitting");
+      $(".cd-buttons li:first-child a").text("Submitting task...");
       try {
         const res = await fetch("/addTask", {
           method: "POST",
@@ -160,15 +168,29 @@ fetchData().then((res) => {
         //console.log(data);
         if (data.errors) {
           alert("Error while saving data.");
+          $(".cd-popup").removeClass("is-visible");
+          stopReload = true;
+          timerRunning = true;
+          $(".stop-timer").removeClass("disabled").removeAttr("disabled");
         }
         if (data.task) {
+          //$(".cd-popup").removeClass("is-visible");
+          $(".cd-buttons").addClass("submitted");
+          $(".cd-buttons li:first-child a").text("Task Submitted.");
           setTimeout(function () {
             window.location.reload();
-          }, 1000);
+          }, 2000);
         }
       } catch (err) {
         console.log(err);
       }
+    });
+
+    $(".alert-no, .cd-popup-close").click(function () {
+      $(".cd-popup").removeClass("is-visible");
+      stopReload = true;
+      timerRunning = true;
+      $(".stop-timer").removeClass("disabled").removeAttr("disabled");
     });
   });
 
@@ -177,8 +199,10 @@ fetchData().then((res) => {
 
 function startTimer() {
   $(".pause").show();
-  window.onbeforeunload = function () {
-    return "Are you sure you want to leave?";
+  window.onbeforeunload = function (e) {
+    if (stopReload) {
+      return "Your data won't be saved.";
+    }
   };
   var startTime = 0; //Get the starting time (right now) in seconds
   localStorage.setItem("startTime", startTime); // Store it if I want to restart the timer on the next page
