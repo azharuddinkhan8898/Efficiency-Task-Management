@@ -54,7 +54,12 @@ userConnectionSchema.statics.check = async function (email) {
 };
 
 userConnectionSchema.statics.viewTasks = async function (email) {
-  let emails = await getEmails([email]);
+  if (email == "senthil.kumaran@kinesso.com") {
+    email = ["senthil.kumaran@kinesso.com", "sumit.korade@kinesso.com"];
+  } else {
+    email = [email];
+  }
+  let emails = await getEmails([...email]);
   // let emails = [
   //   "azharruddin.khan@kinesso.com",
   //   "ritesh.kumar@kinesso.com",
