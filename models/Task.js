@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const TaskConnection = require("./TaskConnection");
+const UserConnection = require("./UserConnection");
 
 const taskSchema = new mongoose.Schema(
   {
@@ -63,13 +64,66 @@ taskSchema.statics.fetchTask = async function (emails) {
   return tasks;
 };
 
-// taskSchema.pre("save", async function (next) {
-//   this.eScore = 0;
-//   let type = this.requestType;
-//   let tasks = this.tasks;
-//   const taskConnection = TaskConnection.find("")
-//   next();
-// });
+taskSchema.pre("save", async function (next) {
+  this.eScore = 0;
+  try {
+    let type = this.requestType;
+    let timeTaken = this.time;
+    let email = this.email;
+    let tasksArray = this.tasks;
+    let user = await UserConnection.find({ email });
+    let userDoj = user[0].doj;
+    var date1 = new Date(parseInt(userDoj));
+    var date2 = new Date();
+    var diffTime = Math.abs(date2 - date1);
+    var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    let oldCat =
+      diffDays > 365
+        ? "aboveOneYear"
+        : diffDays <= 365 && diffDays >= 182
+        ? "oneYear"
+        : diffDays <= 182 && diffDays >= 91
+        ? "sixMonths"
+        : "threeMonths";
+
+    let tasks = this.tasks
+      .map((el) => {
+        return el.taskName;
+      })
+      .join("|")
+      .split("(")
+      .join("\\(")
+      .split(")")
+      .join("\\)");
+
+    tasks = `(${tasks})`;
+    console.log(type, tasks);
+    const taskConnection = await TaskConnection.find({
+      taskType: type,
+      task: { $regex: tasks, $options: "img" },
+    });
+    let numberOfTasks = tasksArray
+      .map((el) => {
+        return parseInt(el.number);
+      })
+      .reduce((total, num) => {
+        return total + num;
+      });
+    let timeShouldTake = taskConnection
+      .map((el) => {
+        return el[oldCat] / el.number;
+      })
+      .reduce((total, num) => {
+        return total + num;
+      });
+    //console.log(numberOfTasks, timeShouldTake, timeTaken / numberOfTasks);
+    this.eScore = (timeShouldTake / (timeTaken / numberOfTasks)) * 10;
+  } catch (err) {
+    console.log(err);
+  }
+
+  next();
+});
 
 const Task = mongoose.model("tasks", taskSchema);
 
