@@ -109,6 +109,18 @@ module.exports.post_data = async (req, res) => {
   });
 };
 
+module.exports.post_setEScore = async (req, res) => {
+  const data = await Task.addEScore(req.body.task, res);
+};
+
+module.exports.post_getCsvData = async (req, res) => {
+  let { startDate, endDate } = req.body;
+  let data = await Task.getCsvData(startDate, endDate, res);
+  // res.status(201).json({
+  //   data,
+  // });
+};
+
 module.exports.addTaskConnection = async (req, res) => {
   const {
     taskType,

@@ -16,6 +16,8 @@ router.get("/dashboard", authController.get_dashboard);
 router.get("/manage-user", authController.get_addUser);
 router.get("/view-tasks", authController.get_viewTasks);
 router.post("/view-tasks", authController.post_viewTasks);
+router.post("/setEScore", authController.post_setEScore);
+router.post("/getCsvData", authController.post_getCsvData);
 
 module.exports = router;
 

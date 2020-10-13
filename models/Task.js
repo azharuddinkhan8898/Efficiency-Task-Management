@@ -72,7 +72,12 @@ taskSchema.pre("save", async function (next) {
     let email = this.email;
     let tasksArray = this.tasks;
     let user = await UserConnection.find({ email });
-    let userDoj = user[0].doj;
+    let userDoj;
+    if (user.length) {
+      userDoj = user[0].doj;
+    } else {
+      userDoj = new Date().getTime();
+    }
     var date1 = new Date(parseInt(userDoj));
     var date2 = new Date();
     var diffTime = Math.abs(date2 - date1);
@@ -102,13 +107,15 @@ taskSchema.pre("save", async function (next) {
       taskType: type,
       task: { $regex: tasks, $options: "img" },
     });
-    let numberOfTasks = tasksArray
-      .map((el) => {
-        return parseInt(el.number);
-      })
-      .reduce((total, num) => {
-        return total + num;
-      });
+    let numberOfTasks = tasksArray.length
+      ? tasksArray
+          .map((el) => {
+            return parseInt(el.number);
+          })
+          .reduce((total, num) => {
+            return total + num;
+          })
+      : 0;
     let timeShouldTake = taskConnection
       .map((el) => {
         return el[oldCat] / el.number;
@@ -117,13 +124,165 @@ taskSchema.pre("save", async function (next) {
         return total + num;
       });
     //console.log(numberOfTasks, timeShouldTake, timeTaken / numberOfTasks);
-    this.eScore = (timeShouldTake / (timeTaken / numberOfTasks)) * 10;
+    this.eScore = numberOfTasks
+      ? (timeShouldTake / (timeTaken / numberOfTasks)) * 10
+      : null;
   } catch (err) {
     console.log(err);
   }
 
   next();
 });
+
+let count = 0;
+
+taskSchema.statics.addEScore = async function (task, res) {
+  let eScore = 0;
+  try {
+    let type = task.requestType;
+    let timeTaken = task.time;
+    let email = task.email;
+    let tasksArray = task.tasks;
+    let user = await UserConnection.find({ email });
+    let userDoj;
+    if (user.length) {
+      userDoj = user[0].doj;
+    } else {
+      userDoj = new Date().getTime();
+    }
+    let date1 = new Date(parseInt(userDoj));
+    let date2 = new Date();
+    let diffTime = Math.abs(date2 - date1);
+    let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    let oldCat =
+      diffDays > 365
+        ? "aboveOneYear"
+        : diffDays <= 365 && diffDays >= 182
+        ? "oneYear"
+        : diffDays <= 182 && diffDays >= 91
+        ? "sixMonths"
+        : "threeMonths";
+
+    let tasks = task.tasks
+      .map((el) => {
+        return el.taskName;
+      })
+      .join("|")
+      .split("(")
+      .join("\\(")
+      .split(")")
+      .join("\\)");
+
+    tasks = `(${tasks})`;
+    //console.log(type, tasks);
+    const taskConnection = await TaskConnection.find({
+      taskType: type,
+      task: { $regex: tasks, $options: "img" },
+    });
+
+    let numberOfTasks = tasksArray.length
+      ? tasksArray
+          .map((el) => {
+            return parseInt(el.number);
+          })
+          .reduce((total, num) => {
+            return total + num;
+          })
+      : 0;
+
+    let timeShouldTake = taskConnection
+      .map((el) => {
+        return el[oldCat] / el.number;
+      })
+      .reduce((total, num) => {
+        return total + num;
+      });
+    //console.log(numberOfTasks, timeShouldTake, timeTaken / numberOfTasks);
+
+    eScore = numberOfTasks
+      ? (timeShouldTake / (timeTaken / numberOfTasks)) * 10
+      : null;
+    if (!eScore || eScore == "NaN" || eScore == NaN) {
+      eScore = null;
+    }
+
+    Task.updateOne(
+      { _id: task._id },
+      {
+        $set: {
+          eScore: eScore,
+        },
+      },
+      { new: true },
+      function (errUpdate, docsUpdate) {
+        if (docsUpdate) {
+          res.status(201).json({ msg: "changed" });
+        }
+      }
+    );
+    console.log(count);
+    count++;
+  } catch (err) {
+    console.log(err, task.email);
+    console.log(count);
+    count++;
+  }
+};
+
+taskSchema.statics.getCsvData = async function (startDate, endDate, res) {
+  let tasks = await Task.find({
+    createdAt: {
+      $gte: startDate,
+      $lt: endDate,
+    },
+    eScore: { $ne: null },
+  });
+
+  let mainData = [];
+
+  tasks.map(async (el, index) => {
+    try {
+      let data = {
+        efficiencyScore: el.eScore,
+        shift: "",
+        reportingManager: "",
+        experience: "",
+      };
+      let user = await UserConnection.find({ email: el.email });
+      data.shift = user[0].shift;
+      data.reportingManager = user[0].reportingName;
+      let userDoj;
+      if (user.length) {
+        userDoj = user[0].doj;
+      } else {
+        userDoj = new Date().getTime();
+      }
+      let date1 = new Date(parseInt(userDoj));
+      let date2 = new Date();
+      let diffTime = Math.abs(date2 - date1);
+      let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      let oldCat =
+        diffDays > 365
+          ? "aboveOneYear"
+          : diffDays <= 365 && diffDays >= 182
+          ? "oneYear"
+          : diffDays <= 182 && diffDays >= 91
+          ? "sixMonths"
+          : "threeMonths";
+      data.experience = oldCat;
+
+      mainData.push(data);
+      if (index + 1 >= tasks.length) {
+        res.status(201).json({
+          mainData,
+        });
+      }
+    } catch (err) {
+      console.log(err, el.email);
+    }
+  });
+  //return tasks;
+};
 
 const Task = mongoose.model("tasks", taskSchema);
 
