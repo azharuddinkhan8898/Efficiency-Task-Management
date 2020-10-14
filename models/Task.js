@@ -118,15 +118,25 @@ taskSchema.pre("save", async function (next) {
       : 0;
     let timeShouldTake = taskConnection
       .map((el) => {
-        return el[oldCat] / el.number;
+        let timeForOneTask = el[oldCat] / el.number;
+        let numberOfTask = search(el.task, tasksArray);
+        return timeForOneTask * parseInt(numberOfTask.number);
       })
       .reduce((total, num) => {
         return total + num;
       });
+
+    let finalNumber =
+      Math.round(
+        ((timeShouldTake / parseInt(timeTaken)) * 10 + Number.EPSILON) * 100
+      ) / 100;
+
     //console.log(numberOfTasks, timeShouldTake, timeTaken / numberOfTasks);
-    this.eScore = numberOfTasks
-      ? (timeShouldTake / (timeTaken / numberOfTasks)) * 10
-      : null;
+
+    eScore = numberOfTasks ? finalNumber : null;
+    if (!eScore || eScore == "NaN" || eScore == NaN) {
+      eScore = null;
+    }
   } catch (err) {
     console.log(err);
   }
@@ -192,17 +202,26 @@ taskSchema.statics.addEScore = async function (task, res) {
 
     let timeShouldTake = taskConnection
       .map((el) => {
-        return el[oldCat] / el.number;
+        let timeForOneTask = el[oldCat] / el.number;
+        let numberOfTask = search(el.task, tasksArray);
+
+        return numberOfTask
+          ? timeForOneTask * parseInt(numberOfTask.number)
+          : 0;
       })
       .reduce((total, num) => {
         return total + num;
       });
+
+    let finalNumber =
+      Math.round(
+        ((timeShouldTake / parseInt(timeTaken)) * 10 + Number.EPSILON) * 100
+      ) / 100;
+
     //console.log(numberOfTasks, timeShouldTake, timeTaken / numberOfTasks);
 
-    eScore = numberOfTasks
-      ? (timeShouldTake / (timeTaken / numberOfTasks)) * 10
-      : null;
-    if (!eScore || eScore == "NaN" || eScore == NaN) {
+    eScore = numberOfTasks ? finalNumber : null;
+    if (!eScore || eScore == "NaN" || eScore == NaN || eScore == 0) {
       eScore = null;
     }
 
@@ -229,6 +248,14 @@ taskSchema.statics.addEScore = async function (task, res) {
   }
 };
 
+function search(taskName, myArray) {
+  for (var i = 0; i < myArray.length; i++) {
+    if (myArray[i].taskName === taskName) {
+      return myArray[i];
+    }
+  }
+}
+
 taskSchema.statics.getCsvData = async function (startDate, endDate, res) {
   let tasks = await Task.find({
     createdAt: {
@@ -247,6 +274,8 @@ taskSchema.statics.getCsvData = async function (startDate, endDate, res) {
         shift: "",
         reportingManager: "",
         experience: "",
+        name: "",
+        date: "",
       };
       let user = await UserConnection.find({ email: el.email });
       data.shift = user[0].shift;
@@ -270,7 +299,8 @@ taskSchema.statics.getCsvData = async function (startDate, endDate, res) {
           ? "sixMonths"
           : "threeMonths";
       data.experience = oldCat;
-
+      data.name = user[0].name;
+      data.date = el.createdAt;
       mainData.push(data);
       if (index + 1 >= tasks.length) {
         res.status(201).json({
