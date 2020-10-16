@@ -133,9 +133,18 @@ taskSchema.pre("save", async function (next) {
 
     //console.log(numberOfTasks, timeShouldTake, timeTaken / numberOfTasks);
 
-    eScore = numberOfTasks ? finalNumber : null;
-    if (!eScore || eScore == "NaN" || eScore == NaN) {
-      eScore = null;
+    this.eScore = numberOfTasks
+      ? finalNumber
+        ? Math.abs(finalNumber)
+        : null
+      : null;
+    if (
+      !this.eScore ||
+      this.eScore == "NaN" ||
+      this.eScore == NaN ||
+      parseInt(timeTaken) < 40
+    ) {
+      this.eScore = null;
     }
   } catch (err) {
     console.log(err);
@@ -221,7 +230,13 @@ taskSchema.statics.addEScore = async function (task, res) {
     //console.log(numberOfTasks, timeShouldTake, timeTaken / numberOfTasks);
 
     eScore = numberOfTasks ? finalNumber : null;
-    if (!eScore || eScore == "NaN" || eScore == NaN || eScore == 0) {
+    if (
+      !eScore ||
+      eScore == "NaN" ||
+      eScore == NaN ||
+      eScore == 0 ||
+      parseInt(timeTaken) < 40
+    ) {
       eScore = null;
     }
 
@@ -229,7 +244,7 @@ taskSchema.statics.addEScore = async function (task, res) {
       { _id: task._id },
       {
         $set: {
-          eScore: eScore,
+          eScore: eScore ? Math.abs(eScore) : null,
         },
       },
       { new: true },
@@ -276,6 +291,9 @@ taskSchema.statics.getCsvData = async function (startDate, endDate, res) {
         experience: "",
         name: "",
         date: "",
+        comment: "",
+        taskType: "",
+        numberOfTasks: 0,
       };
       let user = await UserConnection.find({ email: el.email });
       data.shift = user[0].shift;
@@ -301,6 +319,9 @@ taskSchema.statics.getCsvData = async function (startDate, endDate, res) {
       data.experience = oldCat;
       data.name = user[0].name;
       data.date = el.createdAt;
+      data.comment = el.comment;
+      data.taskType = el.requestType;
+      data.numberOfTasks = el.tasks.length;
       mainData.push(data);
       if (index + 1 >= tasks.length) {
         res.status(201).json({

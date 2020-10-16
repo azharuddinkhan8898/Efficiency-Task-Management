@@ -129,7 +129,7 @@ async function loadData() {
 
   // add eScore
 
-  // for (i = 0; i < 1710; i++) {
+  // for (i = 0; i < 1779; i++) {
   //   let res1 = await fetch("/setEScore", {
   //     method: "POST",
   //     body: JSON.stringify({ task: data.data[i] }),
