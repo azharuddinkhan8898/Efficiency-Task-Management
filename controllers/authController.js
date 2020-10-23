@@ -195,6 +195,6 @@ module.exports.get_viewTasks = async (req, res) => {
 };
 
 module.exports.post_viewTasks = async (req, res) => {
-  const data = await UserConnection.viewTasks(req.body.email);
+  const data = await Task.viewTasks(req.body.email);
   res.status(201).json({ data });
 };

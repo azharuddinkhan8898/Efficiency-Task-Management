@@ -129,7 +129,7 @@ async function loadData() {
 
   // add eScore
 
-  // for (i = 0; i < 1779; i++) {
+  // for (i = 0; i < 1820; i++) {
   //   let res1 = await fetch("/setEScore", {
   //     method: "POST",
   //     body: JSON.stringify({ task: data.data[i] }),
@@ -180,7 +180,7 @@ let startDate = setTimeToZero(
 
 let endDate = setTimeToZero(new Date());
 
-generateCsv(startDate, endDate);
+// generateCsv(startDate, endDate);
 
 function setTimeToZero(date) {
   // let s = "00.01 AM",

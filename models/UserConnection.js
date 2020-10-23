@@ -83,10 +83,25 @@ userConnectionSchema.statics.viewTasks = async function (email) {
 
   let allEmails = [...emails, ...temp1, ...temp2, ...temp3, ...temp4];
   //const tasks = await Task.fetchTask(emails);
-
-  const tasks = await Task.fetchTask(allEmails);
+  const tasks = await fetchTask(allEmails);
 
   return { tasks, emails: allEmails };
+};
+
+const fetchTask = async function (emails) {
+  let emailsString = emails.join("|");
+  emailsString = `(${emailsString})`;
+  console.log(emailsString);
+  //emailsString = `(azharruddin.khan@kinesso.com|ritesh.kumar@kinesso.com|karan.shelar@kinesso.com)`;
+  // try {
+  //   const tasks = await Task.find({
+  //     $or: [{ email: { $regex: emailsString, $options: "img" } }],
+  //   });
+  //   return tasks;
+  // } catch (err) {
+  //   console.log(err);
+  // }
+  console.log(Task);
 };
 
 const getEmails = async function (reportingEmail) {

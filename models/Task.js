@@ -54,6 +54,74 @@ const taskSchema = new mongoose.Schema(
 //   throw Error("incorrect email");
 // };
 
+taskSchema.statics.viewTasks = async function (email) {
+  if (email == "senthil.kumaran@kinesso.com") {
+    email = ["senthil.kumaran@kinesso.com", "sumit.korade@kinesso.com"];
+  } else {
+    email = [email];
+  }
+  let emails = await getEmails([...email]);
+  // let emails = [
+  //   "azharruddin.khan@kinesso.com",
+  //   "ritesh.kumar@kinesso.com",
+  //   "karan.shelar@kinesso.com",
+  // ];
+  let temp1 = [],
+    temp2 = [],
+    temp3 = [],
+    temp4 = [];
+  temp1 = await getEmails(emails);
+  if (temp1.length) {
+    temp2 = await getEmails(temp1);
+  }
+  if (temp2.length) {
+    temp3 = await getEmails(temp2);
+  }
+  if (temp3.length) {
+    temp4 = await getEmails(temp3);
+  }
+  //console.log([...emails, ...temp1, ...temp2, ...temp3, ...temp4]);
+
+  let allEmails = [...emails, ...temp1, ...temp2, ...temp3, ...temp4];
+  //const tasks = await Task.fetchTask(emails);
+  const tasks = await fetchTask(allEmails);
+
+  return { tasks, emails: allEmails };
+};
+
+
+const getEmails = async function (reportingEmail) {
+  let emailsString = reportingEmail.join("|");
+  emailsString = `(${emailsString})`;
+  //const user = await UserConnection.find({ reportingEmail });
+  const user = await UserConnection.find({
+    $or: [{ reportingEmail: { $regex: emailsString, $options: "img" } }],
+  });
+  let emails = [];
+  if (user.length) {
+    user.forEach((el) => {
+      emails.push(el.email);
+    });
+  }
+  return emails;
+};
+
+const fetchTask = async function (emails) {
+  let emailsString = emails.join("|");
+  emailsString = `(${emailsString})`;
+  console.log(emailsString);
+  //emailsString = `(azharruddin.khan@kinesso.com|ritesh.kumar@kinesso.com|karan.shelar@kinesso.com)`;
+  try {
+    const tasks = await Task.find({
+      $or: [{ email: { $regex: emailsString, $options: "img" } }],
+    });
+    return tasks;
+  } catch (err) {
+    console.log(err);
+  }
+  // console.log(Task);
+};
+
 taskSchema.statics.fetchTask = async function (emails) {
   let emailsString = emails.join("|");
   emailsString = `(${emailsString})`;
@@ -83,11 +151,11 @@ taskSchema.pre("save", async function (next) {
     var diffTime = Math.abs(date2 - date1);
     var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     let oldCat =
-      diffDays > 365
+      diffDays > 547
         ? "aboveOneYear"
-        : diffDays <= 365 && diffDays >= 182
+        : diffDays <= 547 && diffDays >= 365
         ? "oneYear"
-        : diffDays <= 182 && diffDays >= 91
+        : diffDays <= 365 && diffDays >= 182
         ? "sixMonths"
         : "threeMonths";
 
@@ -174,11 +242,11 @@ taskSchema.statics.addEScore = async function (task, res) {
     let diffTime = Math.abs(date2 - date1);
     let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     let oldCat =
-      diffDays > 365
+      diffDays > 547
         ? "aboveOneYear"
-        : diffDays <= 365 && diffDays >= 182
+        : diffDays <= 547 && diffDays >= 365
         ? "oneYear"
-        : diffDays <= 182 && diffDays >= 91
+        : diffDays <= 365 && diffDays >= 182
         ? "sixMonths"
         : "threeMonths";
 
@@ -291,9 +359,11 @@ taskSchema.statics.getCsvData = async function (startDate, endDate, res) {
         experience: "",
         name: "",
         date: "",
+        timeTaken: "",
         comment: "",
         taskType: "",
         numberOfTasks: 0,
+        nameOfTasks: "",
       };
       let user = await UserConnection.find({ email: el.email });
       data.shift = user[0].shift;
@@ -309,19 +379,29 @@ taskSchema.statics.getCsvData = async function (startDate, endDate, res) {
       let diffTime = Math.abs(date2 - date1);
       let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
       let oldCat =
-        diffDays > 365
-          ? "aboveOneYear"
+        diffDays > 547
+          ? "Expert"
+          : diffDays <= 547 && diffDays >= 365
+          ? "Professional"
           : diffDays <= 365 && diffDays >= 182
-          ? "oneYear"
-          : diffDays <= 182 && diffDays >= 91
-          ? "sixMonths"
-          : "threeMonths";
+          ? "Intermediate"
+          : "Beginner";
       data.experience = oldCat;
       data.name = user[0].name;
       data.date = el.createdAt;
       data.comment = el.comment;
       data.taskType = el.requestType;
       data.numberOfTasks = el.tasks.length;
+      data.nameOfTasks = el.tasks.map((el) => {
+        return el.number + ":" + el.taskName;
+      });
+      data.nameOfTasks =
+        data.nameOfTasks.length > 1
+          ? data.nameOfTasks.join("$ ")
+          : data.nameOfTasks[0];
+
+      data.timeTaken = el.time;
+
       mainData.push(data);
       if (index + 1 >= tasks.length) {
         res.status(201).json({
