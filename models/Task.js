@@ -109,7 +109,7 @@ const getEmails = async function (reportingEmail) {
 const fetchTask = async function (emails) {
   let emailsString = emails.join("|");
   emailsString = `(${emailsString})`;
-  console.log(emailsString);
+  //console.log(emailsString);
   //emailsString = `(azharruddin.khan@kinesso.com|ritesh.kumar@kinesso.com|karan.shelar@kinesso.com)`;
   try {
     const tasks = await Task.find({
